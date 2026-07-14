@@ -1,0 +1,11 @@
+[
+    {
+        "student_id": 2,
+        "name": "Kajal",
+        "age": 18,
+        "email": "jkajal@123",
+        "mobile_number": "222222222222",
+        "spi": 5.0,
+        "cgpa": 8.0
+    }
+]

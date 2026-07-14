@@ -1,7 +1,7 @@
 class Student:
-    def __init__(self, next_student_id: int, name: str, age: int, email: str, mobile_number, spi: float, cgpa: float):
+    def __init__(self, student_id: int, name: str, age: int, email: str, mobile_number, spi: float, cgpa: float):
     
-        self.next_student_id = next_student_id
+        self.student_id = student_id
         self.name = name
         self.age = age
         self.email = email
@@ -10,7 +10,7 @@ class Student:
         self.cgpa = cgpa
 
     def display_info(self):
-        print(f"Student ID: {self.next_student_id}")
+        print(f"Student ID: {self.student_id}")
         print(f"Name: {self.name}")
         print(f"Age: {self.age}")
         print(f"Email: {self.email}")
