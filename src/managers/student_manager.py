@@ -1,4 +1,12 @@
 from models.student import Student
+from utils.validators import (
+    validate_age,
+    validate_cgpa,
+    validate_email,
+    validate_mobile,
+    validate_name,
+    validate_spi,
+)
 import json
 
 class StudentManager:
@@ -39,12 +47,12 @@ class StudentManager:
             json.dump(student_data, file, indent=4)
 
     def add_student(self):
-        name = input("Student Name: ")
-        age = int(input("Age: "))
-        email = input("Email ID: ")
-        mobile = input("Contact No: ")
-        spi = float(input("SPI: "))
-        cgpa = float(input("CGPA: "))
+        name = validate_name()
+        age = validate_age()
+        email = validate_email()
+        mobile = validate_mobile()
+        spi = validate_spi()
+        cgpa = validate_cgpa()
         
         student = Student(self.next_student_id, name, age, email, mobile, spi, cgpa)
         self.students.append(student)
@@ -90,12 +98,12 @@ class StudentManager:
 
         for idx, student in enumerate(self.students):
             if student.student_id == user:
-                new_name = input("Student Name: ")
-                new_age = int(input("Age: "))
-                new_email = input("Email ID: ")
-                new_mobile = input("Contact No: ")
-                new_spi = float(input("SPI: "))
-                new_cgpa = float(input("CGPA: "))
+                new_name = validate_name()
+                new_age = validate_age()
+                new_email = validate_email()
+                new_mobile = validate_mobile()
+                new_spi = validate_spi()
+                new_cgpa = validate_cgpa()
 
                 student.name = new_name
                 student.age = new_age

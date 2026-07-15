@@ -2,14 +2,15 @@ from managers.student_manager import StudentManager
 
 manager = StudentManager()
 
-while True:
+while True: 
     print("="*5, "Student Management System", "="*5)
     print("1. Add Student")
     print("2. View Student")
     print("3. Delete Student")
     print("4. Update Student")
     print("5. Search Student")
-    print("6. Exit")
+    print("6. Save Student data")
+    print("7. Exit")
 
     choice = int(input("Enter your choice: "))
 
@@ -29,6 +30,9 @@ while True:
         manager.search_student()
 
     elif choice == 6:
+        manager.save_students()
+
+    elif choice == 7:
         print("Exiting the program....")
         break
 
