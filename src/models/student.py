@@ -29,6 +29,3 @@ class Student:
         print(f"│  {'CGPA':<13}: {self.cgpa:<24}│")
 
         print(bottom_border)
-
-student1 = Student(101, "Alice Smith", 20, "alice@email.com", "+1234567890", 8.5, 8.7)
-student1.display_info()
